@@ -3,28 +3,73 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>songs</title>
+        <title>music player</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-
         <!-- MOBILE WEB APP, ADD THIS TO <head>..</head> OF index.html -->
        <link rel="icon" type="image/png" href="favicon.png" />
        <link rel="apple-touch-icon" href="favicon.png">
        <meta name="apple-mobile-web-app-title" content="songs">
        <meta name="apple-mobile-web-app-capable" content="yes">
        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-        <h1>songs</h1>
-    </body>
+
+<title>music player</title>
+<!-- Load FontAwesome icons -->
+<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<!-- Load the custom CSS style file -->
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="player">
+
+	<div class="details">
+	<div class="now-playing">playing SONG by ARTIST</div>
+	<div class="song-art"></div>
+	<div class="song-name">Song Name</div>
+	<div class="song-artist">Song Artist</div>
+	</div>
+
+	
+	<div class="buttons">
+	<div class="prev-song" onclick="prevsong()">
+		<i class="fa fa-step-backward fa-2x"></i>
+	</div>
+	<div class="playpause-song" onclick="playpausesong()">
+		<i class="fa fa-play-circle fa-5x"></i>
+	</div>
+	<div class="next-song" onclick="nextsong()">
+		<i class="fa fa-step-forward fa-2x"></i>
+	</div>
+	</div>
+
+	<div class="slider_container">
+	<div class="current-time">00:00</div>
+	<input type="range" min="1" max="100"
+		value="0" class="seek_slider" onchange="seekTo()">
+	<div class="total-duration">00:00</div>
+	</div>
+
+	
+	<div class="slider_container">
+	<i class="fa fa-volume-down"></i>
+	<input type="range" min="1" max="100"
+		value="99" class="volume_slider" onchange="setVolume()">
+	<i class="fa fa-volume-up"></i>
+	</div>
+</div>
+
+<script src="main.js"></script>
+</body>
 </html>
+
+</html>
+
+
